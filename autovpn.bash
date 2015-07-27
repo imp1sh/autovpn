@@ -1,4 +1,6 @@
 #!/bin/bash
+# autovpn
+# read and understand
 # Jochen Demmer
 checkinterval=60
 checkifs=( 'bridge0', 'wlan0' )
