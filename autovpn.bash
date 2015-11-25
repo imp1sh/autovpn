@@ -39,6 +39,7 @@ while [ true ]; do
 		if [ `cat /sys/class/net/$i/operstate |grep -c up` -gt 0 ]; then
 			echo "`date` $0 interface $i seems to be up."
 			((x++))
+			break
 		else
 			echo "`date` $0 interface $i seems to be down."
 			sleep 1
