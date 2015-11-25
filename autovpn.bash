@@ -3,7 +3,7 @@
 # read and understand
 # Jochen Demmer
 checkinterval=60
-checkifs=( 'bridge0', 'wlan0' )
+checkifs=( 'enp0s25', 'wlp3s0' )
 if [ -z $1 ]; then
 	echo "First parameter is path to vpn config."
 	exit 1
@@ -33,6 +33,7 @@ while [ true ]; do
 			break
 		else
 			echo "`date` $0 there is no internet. I'll keep trying."
+			sleep 10
 		fi
 	fi
 done
